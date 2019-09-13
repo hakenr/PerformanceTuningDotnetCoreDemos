@@ -13,7 +13,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 	public class ReflectionLayoutTrickBenchmarks
 	{
 		[Params(1000000)]
-		public int Iterations { get; set; } = 1000000;
+		public int Iterations { get; set; }
 
 
 		[Benchmark]
