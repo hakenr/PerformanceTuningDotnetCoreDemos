@@ -11,7 +11,8 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			//BenchmarkRunner.Run<StringConcatenationBenchmarks>();
 			//BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
 			//BenchmarkRunner.Run<ReflectionBenchmarks>();
-			BenchmarkRunner.Run<ReflectionLayoutTrickBenchmarks>();
+			//BenchmarkRunner.Run<ReflectionLayoutTrickBenchmarks>();
+			BenchmarkRunner.Run<SubstringAsSpanBenchmarks>();
 		}
 	}
 }
