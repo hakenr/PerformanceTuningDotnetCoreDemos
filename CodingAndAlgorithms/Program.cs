@@ -1,4 +1,5 @@
-﻿using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Environments;
+using BenchmarkDotNet.Running;
 using System;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
@@ -7,7 +8,8 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 	{
 		public static void Main(string[] args)
 		{
-			var summmary = BenchmarkRunner.Run<StringConcatenationBenchmarks>();
+			//BenchmarkRunner.Run<StringConcatenationBenchmarks>();
+			BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
 		}
 	}
 }
