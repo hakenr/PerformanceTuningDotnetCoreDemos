@@ -9,7 +9,9 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 		public static void Main(string[] args)
 		{
 			//BenchmarkRunner.Run<StringConcatenationBenchmarks>();
-			BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
+			//BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
+			//BenchmarkRunner.Run<ReflectionBenchmarks>();
+			BenchmarkRunner.Run<ReflectionLayoutTrickBenchmarks>();
 		}
 	}
 }
