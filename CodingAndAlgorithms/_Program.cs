@@ -13,6 +13,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			// strings
 			//BenchmarkRunner.Run<StringConcatenation>();
 			//BenchmarkRunner.Run<StringBuilderSizePreinitialization>();
+			// related: BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
 			//BenchmarkRunner.Run<SubstringAsSpan>();
 			//BenchmarkRunner.Run<StringConcatConsolidation>();
 			//BenchmarkRunner.Run<StringConcatConditionConsolidation>();
@@ -24,10 +25,15 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			//BenchmarkRunner.Run<DictionaryRemoveRedundantChecks>();
 			//BenchmarkRunner.Run<CollectionEmptyCheck>();
 			//BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
-			//BenchmarkRunner.Run<StringBuilderCapacityPreinitialization>();
+			// related: BenchmarkRunner.Run<StringBuilderCapacityPreinitialization>();
+
+			// redundancy
+			//BenchmarkRunner.Run<DictionaryPickupRedundantChecks>();
+			//BenchmarkRunner.Run<DictionaryRemoveRedundantChecks>();
+			BenchmarkRunner.Run<RedundantCasting>();
 
 			// exception handling, parsing
-			BenchmarkRunner.Run<TryCatch>();
+			//BenchmarkRunner.Run<TryCatch>();
 
 			// reflection
 			//BenchmarkRunner.Run<Reflection>();
