@@ -24,7 +24,10 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			//BenchmarkRunner.Run<DictionaryRemoveRedundantChecks>();
 			//BenchmarkRunner.Run<CollectionEmptyCheck>();
 			//BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
-			BenchmarkRunner.Run<StringBuilderCapacityPreinitialization>();
+			//BenchmarkRunner.Run<StringBuilderCapacityPreinitialization>();
+
+			// exception handling, parsing
+			BenchmarkRunner.Run<TryCatch>();
 
 			// reflection
 			//BenchmarkRunner.Run<Reflection>();
