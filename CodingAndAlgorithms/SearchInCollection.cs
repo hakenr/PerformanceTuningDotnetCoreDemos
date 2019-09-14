@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 1)]
-	public class SearchInCollectionBenchmarks
+	public class SearchInCollection
 	{
 		[Params(100, 1_000, 10_000, 50_000)]
 		public int CollectionSize { get; set; }

@@ -9,21 +9,21 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 		public static void Main(string[] args)
 		{
 			// strings
-			//BenchmarkRunner.Run<StringConcatenationBenchmarks>();
-			//BenchmarkRunner.Run<SubstringAsSpanBenchmarks>();
-			//BenchmarkRunner.Run<StringConcatConsolidationBenchmarks>();
-			//BenchmarkRunner.Run<StringConcatConditionConsolidationBenchmarks>();
-			//BenchmarkRunner.Run<StringConcatFifthConsolidationBenchmarks>();
+			//BenchmarkRunner.Run<StringConcatenation>();
+			//BenchmarkRunner.Run<SubstringAsSpan>();
+			//BenchmarkRunner.Run<StringConcatConsolidation>();
+			//BenchmarkRunner.Run<StringConcatConditionConsolidation>();
+			//BenchmarkRunner.Run<StringConcatFifthConsolidation>();
 
 			// data structures
-			//BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
-			//BenchmarkRunner.Run<DictionaryPickupRedundantChecksBenchmarks>();
-			//BenchmarkRunner.Run<DictionaryRemoveRedundantChecksBenchmarks>();
+			//BenchmarkRunner.Run<SearchInCollection>();
+			//BenchmarkRunner.Run<DictionaryPickupRedundantChecks>();
+			//BenchmarkRunner.Run<DictionaryRemoveRedundantChecks>();
 			BenchmarkRunner.Run<CollectionEmptyCheck>();
 
 			// reflection
-			//BenchmarkRunner.Run<ReflectionBenchmarks>();
-			//BenchmarkRunner.Run<ReflectionLayoutTrickBenchmarks>();
+			//BenchmarkRunner.Run<Reflection>();
+			//BenchmarkRunner.Run<ReflectionLayoutTrick>();
 		}
 	}
 }

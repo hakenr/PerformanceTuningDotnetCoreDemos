@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 100, invocationCount: 10000)]
-	public class DictionaryPickupRedundantChecksBenchmarks
+	public class DictionaryPickupRedundantChecks
 	{
 		private const int DictionarySize = 100_000;
 

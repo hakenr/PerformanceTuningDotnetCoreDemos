@@ -9,7 +9,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 200, invocationCount: 100000)]
 	[MemoryDiagnoser]
-	public class SubstringAsSpanBenchmarks
+	public class SubstringAsSpan
 	{
 		private string inputString = "BlahBlahBlahBlahFooBarDaahBlahBlahBlahBlahFooBarDaahBlahBlahBlahBlahFooBarDaah";
 		private StringBuilder sb;

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 4)]
-	public class ReflectionLayoutTrickBenchmarks
+	public class ReflectionLayoutTrick
 	{
 		[Params(1000000)]
 		public int Iterations { get; set; }

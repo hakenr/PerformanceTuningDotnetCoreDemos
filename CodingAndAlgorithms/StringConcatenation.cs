@@ -9,7 +9,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 1)]
 	[MemoryDiagnoser]
-	public class StringConcatenationBenchmarks
+	public class StringConcatenation
 	{
 		[Params(1, 2, 3, 50, 100, 1000, 100_000)]
 		public int Concatenations { get; set; }

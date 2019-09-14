@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 5)]
-	public class ReflectionBenchmarks
+	public class Reflection
 	{
 		[Params(1000000)]
 		public int Iterations { get; set; }
@@ -27,7 +27,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 
 
 		[Benchmark]
-		public MyClass Reflection()
+		public MyClass SimpleReflection()
 		{
 			for (int i = 0; i < Iterations; i++)
 			{
@@ -74,6 +74,6 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 //|                           Method | Iterations |         Mean |        Error |       StdDev |
 //|--------------------------------- |----------- |-------------:|-------------:|-------------:|
 //|                 DirectAssignment |    1000000 |     527.5 us |     8.385 us |     2.178 us |
-//|                       Reflection |    1000000 | 219,436.0 us | 4,135.933 us | 1,074.089 us |
+//|                 SimpleReflection |    1000000 | 219,436.0 us | 4,135.933 us | 1,074.089 us |
 //| ReflectionWithCachedPropertyInfo |    1000000 | 147,181.5 us | 1,873.153 us |   486.452 us |
 //|                          Dynamic |    1000000 |   5,752.0 us |   113.322 us |    29.429 us |

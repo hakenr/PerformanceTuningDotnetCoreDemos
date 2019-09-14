@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 100)]
-	public class DictionaryRemoveRedundantChecksBenchmarks
+	public class DictionaryRemoveRedundantChecks
 	{
 		private const int DictionarySize = 100_000;
 

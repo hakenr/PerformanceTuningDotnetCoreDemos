@@ -9,7 +9,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
 	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 200, invocationCount: 1000000)]
 	[MemoryDiagnoser]
-	public class StringConcatFifthConsolidationBenchmarks
+	public class StringConcatFifthConsolidation
     {
 		private string s1 = "Blah";
 		private string s2 = "Dooh";
