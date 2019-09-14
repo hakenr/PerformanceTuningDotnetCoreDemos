@@ -18,7 +18,8 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			// data structures
 			//BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
 			//BenchmarkRunner.Run<DictionaryPickupRedundantChecksBenchmarks>();
-			BenchmarkRunner.Run<DictionaryRemoveRedundantChecksBenchmarks>();
+			//BenchmarkRunner.Run<DictionaryRemoveRedundantChecksBenchmarks>();
+			BenchmarkRunner.Run<CollectionEmptyCheck>();
 
 			// reflection
 			//BenchmarkRunner.Run<ReflectionBenchmarks>();
