@@ -11,9 +11,9 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			// !! Quit Microsoft Teams as it eats your CPU !!
 
 			// strings
-			//BenchmarkRunner.Run<StringConcatenation>();
-			//BenchmarkRunner.Run<StringBuilderSizePreinitialization>();
-			// related: BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
+			BenchmarkRunner.Run<StringConcatenation>();
+			//BenchmarkRunner.Run<StringBuilderCapacityPreinitialization>();
+			//related: BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
 			//BenchmarkRunner.Run<SubstringAsSpan>();
 			//BenchmarkRunner.Run<StringConcatConsolidation>();
 			//BenchmarkRunner.Run<StringConcatConditionConsolidation>();
@@ -34,7 +34,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 
 			//BenchmarkRunner.Run<BoxingUnboxing>();
 			//BenchmarkRunner.Run<Caching>();
-			BenchmarkRunner.Run<Finalization>();
+			//BenchmarkRunner.Run<Finalization>();
 
 			// exception handling, parsing
 			//BenchmarkRunner.Run<TryCatch>();
