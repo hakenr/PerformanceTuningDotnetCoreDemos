@@ -8,8 +8,11 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 	{
 		public static void Main(string[] args)
 		{
+			// !! Quit Microsoft Teams as it eats your CPU !!
+
 			// strings
 			//BenchmarkRunner.Run<StringConcatenation>();
+			//BenchmarkRunner.Run<StringBuilderSizePreinitialization>();
 			//BenchmarkRunner.Run<SubstringAsSpan>();
 			//BenchmarkRunner.Run<StringConcatConsolidation>();
 			//BenchmarkRunner.Run<StringConcatConditionConsolidation>();
@@ -19,7 +22,9 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			//BenchmarkRunner.Run<SearchInCollection>();
 			//BenchmarkRunner.Run<DictionaryPickupRedundantChecks>();
 			//BenchmarkRunner.Run<DictionaryRemoveRedundantChecks>();
-			BenchmarkRunner.Run<CollectionEmptyCheck>();
+			//BenchmarkRunner.Run<CollectionEmptyCheck>();
+			//BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
+			BenchmarkRunner.Run<StringBuilderCapacityPreinitialization>();
 
 			// reflection
 			//BenchmarkRunner.Run<Reflection>();
