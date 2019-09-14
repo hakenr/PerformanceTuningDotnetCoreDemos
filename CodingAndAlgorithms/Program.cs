@@ -13,10 +13,12 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			//BenchmarkRunner.Run<SubstringAsSpanBenchmarks>();
 			//BenchmarkRunner.Run<StringConcatConsolidationBenchmarks>();
 			//BenchmarkRunner.Run<StringConcatConditionConsolidationBenchmarks>();
-			BenchmarkRunner.Run<StringConcatFifthConsolidationBenchmarks>();
+			//BenchmarkRunner.Run<StringConcatFifthConsolidationBenchmarks>();
 
 			// data structures
 			//BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
+			//BenchmarkRunner.Run<DictionaryPickupRedundantChecksBenchmarks>();
+			BenchmarkRunner.Run<DictionaryRemoveRedundantChecksBenchmarks>();
 
 			// reflection
 			//BenchmarkRunner.Run<ReflectionBenchmarks>();
