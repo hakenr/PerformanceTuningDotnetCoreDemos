@@ -8,11 +8,19 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 	{
 		public static void Main(string[] args)
 		{
+			// strings
 			//BenchmarkRunner.Run<StringConcatenationBenchmarks>();
+			//BenchmarkRunner.Run<SubstringAsSpanBenchmarks>();
+			//BenchmarkRunner.Run<StringConcatConsolidationBenchmarks>();
+			//BenchmarkRunner.Run<StringConcatConditionConsolidationBenchmarks>();
+			BenchmarkRunner.Run<StringConcatFifthConsolidationBenchmarks>();
+
+			// data structures
 			//BenchmarkRunner.Run<SearchInCollectionBenchmarks>();
+
+			// reflection
 			//BenchmarkRunner.Run<ReflectionBenchmarks>();
 			//BenchmarkRunner.Run<ReflectionLayoutTrickBenchmarks>();
-			BenchmarkRunner.Run<SubstringAsSpanBenchmarks>();
 		}
 	}
 }
