@@ -33,7 +33,8 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			//BenchmarkRunner.Run<RedundantCasting>();
 
 			//BenchmarkRunner.Run<BoxingUnboxing>();
-			BenchmarkRunner.Run<Caching>();
+			//BenchmarkRunner.Run<Caching>();
+			BenchmarkRunner.Run<Finalization>();
 
 			// exception handling, parsing
 			//BenchmarkRunner.Run<TryCatch>();
