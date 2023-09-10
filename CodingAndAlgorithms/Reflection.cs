@@ -1,13 +1,8 @@
 ﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 5)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 5)]
 	public class Reflection
 	{
 		[Params(1000000)]

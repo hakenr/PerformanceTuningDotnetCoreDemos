@@ -1,16 +1,11 @@
 ﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 30, invocationCount: 1_000_000)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 30, invocationCount: 1_000_000)]
 	public class RedundantCasting
-    {
-        [Benchmark]
+	{
+		[Benchmark]
 		public string DoubleCasting()
 		{
 			if (obj is string)
@@ -43,7 +38,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 		}
 
 		private object obj = "Blaah";
-    }
+	}
 }
 
 //|          Method |      Mean |     Error |    StdDev |

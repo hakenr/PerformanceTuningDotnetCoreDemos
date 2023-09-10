@@ -1,25 +1,20 @@
 ﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 10, invocationCount: 100_000_000)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 10, invocationCount: 100_000_000)]
 	public class BoxingUnboxing
-    {
-        [Benchmark]
+	{
+		[Benchmark]
 		public int WithBoxing()
 		{
-			int  a = 10;						// primitive value-type in stack
+			int a = 10;                     // primitive value-type in stack
 			int r = DoSomethingObject(a);       // has to be boxed to reference-type object
 			return r;
 		}
 		private int DoSomethingObject(object o)
 		{
-			return (int)o;						// and unboxed to int as we want to use it again
+			return (int)o;                      // and unboxed to int as we want to use it again
 		}
 
 
@@ -37,7 +32,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 
 
 		[Benchmark]
-		public int Generic()					// about the same IL code as without boxing
+		public int Generic()                    // about the same IL code as without boxing
 		{
 			int a = 10;
 			int r = DoSomethingGeneric(a);

@@ -1,16 +1,11 @@
 ﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 10, invocationCount: 1_000_000)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 10, invocationCount: 1_000_000)]
 	[MemoryDiagnoser]
 	public class Finalization
-    {
+	{
 		[Benchmark]
 		public object NoFinalization()
 		{

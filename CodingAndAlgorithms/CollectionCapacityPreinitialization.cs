@@ -1,23 +1,19 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using BenchmarkDotNet.Attributes;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 1, invocationCount: 100)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 1, invocationCount: 100)]
 	[MemoryDiagnoser]
 	public class CollectionCapacityPreinitialization
-    {
+	{
 		[Params(100, 1_000, 10_000, 100_000, 1_000_000)]
 		public int CollectionSize { get; set; }
 
 		[Benchmark]
 		public object ListPlain()
 		{
-			var list = new List<object>();				 // <--- Grows: 0, 4, 8, 16, 32, 64, ...
+			var list = new List<object>();               // <--- Grows: 0, 4, 8, 16, 32, 64, ...
 			for (int i = 0; i < CollectionSize; i++)
 			{
 				list.Add(item);

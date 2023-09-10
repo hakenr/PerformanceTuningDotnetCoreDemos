@@ -1,13 +1,11 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BenchmarkDotNet.Attributes;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 1)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 1)]
 	public class SearchInCollection
 	{
 		[Params(100, 1_000, 10_000, 50_000)]

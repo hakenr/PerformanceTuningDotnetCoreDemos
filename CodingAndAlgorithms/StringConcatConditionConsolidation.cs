@@ -1,20 +1,16 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using BenchmarkDotNet.Attributes;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 200, invocationCount: 1000000)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 200, invocationCount: 1000000)]
 	[MemoryDiagnoser]
 	public class StringConcatConditionConsolidation
 	{
 		private string s1 = "Blah";
 		private string s2 = "Dooh";
 		private string s3 = "Hey!!!!!!!";
-		private bool condition = (DateTime.Now.Hour >= 0);
+		private bool condition = DateTime.Now.Hour >= 0;
 
 		[Benchmark]
 		public string MultipleConcats()

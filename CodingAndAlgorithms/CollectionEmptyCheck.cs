@@ -1,14 +1,11 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BenchmarkDotNet.Attributes;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 5, invocationCount: 10000)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 5, invocationCount: 10000)]
 	public class CollectionEmptyCheck
 	{
 		[Params(100, 1_000, 10_000, 50_000)]
@@ -56,6 +53,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 // Count() is faster for scenarios, where you have a data-type, which knows it's length and is able to return it immediately.
 // Any() is safer for generic scenarios, where it only checks existence of the first item.
 
+//net2.2:
 //|                    Method | CollectionSize |           Mean |         Error |      StdDev |         Median |
 //|-------------------------- |--------------- |---------------:|--------------:|------------:|---------------:|
 //|        List_IsEmpty_Count |            100 |       4.972 ns |     0.3073 ns |   0.0798 ns |       4.940 ns |

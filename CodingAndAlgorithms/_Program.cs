@@ -1,6 +1,4 @@
-﻿using BenchmarkDotNet.Environments;
-using BenchmarkDotNet.Running;
-using System;
+﻿using BenchmarkDotNet.Running;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
@@ -13,7 +11,8 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			// strings
 			BenchmarkRunner.Run<StringConcatenation>();
 			//BenchmarkRunner.Run<StringBuilderCapacityPreinitialization>();
-			//related: BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
+			// related: 
+			//BenchmarkRunner.Run<CollectionCapacityPreinitialization>();
 			//BenchmarkRunner.Run<SubstringAsSpan>();
 			//BenchmarkRunner.Run<StringConcatConsolidation>();
 			//BenchmarkRunner.Run<StringConcatConditionConsolidation>();

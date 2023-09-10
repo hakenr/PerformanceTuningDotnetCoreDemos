@@ -1,16 +1,12 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
+using BenchmarkDotNet.Attributes;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 10, invocationCount: 10)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 10, invocationCount: 10)]
 	[MemoryDiagnoser]
 	public class StringBuilderCapacityPreinitialization
-    {
+	{
 		[Params(100, 1_000, 10_000, 100_000, 500_000)]
 		public int Size { get; set; }
 

@@ -1,16 +1,11 @@
 ﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 200, invocationCount: 1000000)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 200, invocationCount: 1000000)]
 	[MemoryDiagnoser]
 	public class StringConcatConsolidation
-    {
+	{
 		private string s1 = "Blah";
 		private string s2 = "Dooh";
 		private string s3 = "Hey!!!!!!!";

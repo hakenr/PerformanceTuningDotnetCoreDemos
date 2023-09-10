@@ -1,15 +1,10 @@
-﻿using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+using BenchmarkDotNet.Attributes;
 
 namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 {
-	[SimpleJob(warmupCount: 1, launchCount: 1, targetCount: 4)]
+	[SimpleJob(warmupCount: 1, launchCount: 1, iterationCount: 4)]
 	public class ReflectionLayoutTrick
 	{
 		[Params(1000000)]
@@ -40,7 +35,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 			return instance;
 		}
 
-		
+
 
 		[Benchmark]
 		public MyClass ExplicitLayoutReflectionAdapter()
