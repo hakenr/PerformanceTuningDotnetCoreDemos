@@ -26,7 +26,14 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 		[Benchmark]
 		public string ConsolidatedConcats()
 		{
-			return condition ? s1 + s2 + s3 : s1 + s2;
+			if (condition)
+			{
+				return s1 + s2 + s3;
+			}
+			else
+			{
+				return s1 + s2;
+			}
 		}
 	}
 }

@@ -7,7 +7,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 	[MemoryDiagnoser]
 	public class StringConcatenation
 	{
-		[Params(1, 2, 3, 50, 100, 1000, 100_000)]
+		[Params(1, 2, 3, 100, 1000, 10_000, 100_000)]
 		public int Concatenations { get; set; }
 
 		[Benchmark]

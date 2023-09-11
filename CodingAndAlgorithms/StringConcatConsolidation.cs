@@ -25,6 +25,8 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 	}
 }
 
+// https://learn.microsoft.com/en-us/dotnet/api/system.string.concat?view=net-7.0
+
 //|              Method |     Mean |     Error |    StdDev |  Gen 0 | Gen 1 | Gen 2 | Allocated |
 //|-------------------- |---------:|----------:|----------:|-------:|------:|------:|----------:|
 //|     MultipleConcats | 30.71 ns | 0.1997 ns | 0.8191 ns | 0.0260 |     - |     - |     112 B |

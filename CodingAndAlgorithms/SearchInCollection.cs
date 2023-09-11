@@ -11,7 +11,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 		[Params(100, 1_000, 10_000, 50_000)]
 		public int CollectionSize { get; set; }
 
-		[Benchmark(Description = "List.Contains() : O(n)     ")]
+		[Benchmark(Description = "List.Contains()      : O(n)")]
 		public int Contains()
 		{
 			// Contains = sekvenční vyhledávání = O(n), též hledání LINQ-to-XY: .Where(), First(), Count(), ... !!!
@@ -27,7 +27,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 		}
 
 
-		[Benchmark(Description = "Dictionary : O(1)     ")]
+		[Benchmark(Description = "Dictionary           : O(1)")]
 		public int Dictionary()
 		{
 			// Dictionary = Hashtable, O(1), též HashSet
@@ -35,7 +35,7 @@ namespace Haken.PerformanceTuningDotnetCoreDemos.CodingAndAlgorithms
 		}
 
 
-		[Benchmark(Description = "LINQ.ToLookup() : O(1)     ")]
+		[Benchmark(Description = "LINQ.ToLookup()      : O(1)")]
 		public int ToLookup()
 		{
 			// ToLookup = Hashtable, O(1)
